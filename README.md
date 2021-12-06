@@ -36,8 +36,9 @@
 https://github.com/PacktPublishing/The-Azure-Cloud-Native-Architecture-Mapbook
 
 ## Upto
-Page 80
+Page 86
 
-The following code snippet is an example of a configuration workload that we can pass to a new orchestration instance
+Looking at the code in action
 
-Before that: clone the book source code and run the reference architecture to really understand it
+Follow this to see how you can run Azure Durable Functions locally using C#
+https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-create-first-csharp?pivots=code-editor-vscode
