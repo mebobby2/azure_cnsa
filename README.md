@@ -1,5 +1,15 @@
 # Azure Cloud Native Solution Architect
 
+## Run
+### Running Azure Functions Locally
+Follow this: https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-create-first-csharp?pivots=code-editor-vscode
+
+Dependencies:
+* Azure Functions Core Tools - lets you develop and test your functions on your local computer from the command prompt or terminal
+* .NET Core SDK verson 6
+
+Then from the root of the folder, e.g. /Users/bobbylei/Desktop/learn/The-Azure-Cloud-Native-Architecture-Mapbook/Chapter02/code/PacktOrchestrationDemo run the command 'func start'
+
 ## Notes
 * DIKW Pyramind
   * data: 31,3,3000
