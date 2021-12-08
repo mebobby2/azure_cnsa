@@ -8,7 +8,17 @@ Dependencies:
 * Azure Functions Core Tools - lets you develop and test your functions on your local computer from the command prompt or terminal
 * .NET Core SDK verson 6
 
-Then from the root of the folder, e.g. /Users/bobbylei/Desktop/learn/The-Azure-Cloud-Native-Architecture-Mapbook/Chapter02/code/PacktOrchestrationDemo run the command 'func start'
+Then from the root of the folder, e.g. /Users/bobbylei/Desktop/learn/The-Azure-Cloud-Native-Architecture-Mapbook/Chapter02/code/PacktOrchestrationDemo run the command 'func start'.
+
+Azure Functions requires an Azure storage account in order to run. Some uses of this storage account include key management, timer trigger management, and Event Hubs checkpoints. The storage account must be a general-purpose one that supports blobs, queues, and tables. Hence, we need to ensure the property AzureWebJobsStorage is set in the file local.settings.json.
+
+For this, we make use of an emulator. Azurite is an emulator for local Azure Storage development.
+
+To install Azurite:
+1. docker pull mcr.microsoft.com/azure-storage/azurite
+2. docker run -p 10000:10000 -p 10001:10001 -p 10002:10002 mcr.microsoft.com/azure-storage/azurite
+
+Now, to use Azurite, just set the value of AzureWebJobsStorage to 'UseDevelopmentStorage=true'
 
 ## Notes
 * DIKW Pyramind
@@ -46,9 +56,6 @@ Then from the root of the folder, e.g. /Users/bobbylei/Desktop/learn/The-Azure-C
 https://github.com/PacktPublishing/The-Azure-Cloud-Native-Architecture-Mapbook
 
 ## Upto
-Page 86
+Page 91
 
-Looking at the code in action
-
-Follow this to see how you can run Azure Durable Functions locally using C#
-https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-create-first-csharp?pivots=code-editor-vscode
+Understanding the gaps in our reference architecture
