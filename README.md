@@ -51,11 +51,25 @@ Now, to use Azurite, just set the value of AzureWebJobsStorage to 'UseDevelopmen
   * Design with security in mind: This principle should always be applied, even on-premises, but the cloud makes it a primary concern. With this principle, you should make sure to involve all the security stakeholders from the start, so as to avoid any unpleasant surprises.
   * Leverage automation: Launching faster means having an efficient CI/CD toolchain. The cloud offers unique infrastructure-as-code capabilities that help deploy faster.
   * Multi-tenant over privatization: While privatization might give you more control, it also means a risk of reintroducing your on-premises practices to the cloud. Given the audit reports we had, we see that this might not be a good idea. Leveraging multi-tenant PaaS services that have been designed for millions of organizations worldwide is a better response to the business drivers.
+* Traditional IT is entirely based on the perimeter approach, which sometimes conflicts with the cloud's zero-trust approach.
+* A landing zone is to structure, govern, and rule the Azure platform for the assets that will be hosted on it.
+  * Controlling network flows is one of the key governance aspects. Controlling the network means mastering internal and external traffic, inbound and outbound, flow logs, and so on.
+* Connectivity between the on-premises data center and Azure is usually ensured by a telecom provider or a cloud exchange broker (CEB), which consists of having a central connection point to a partner, such as Equinix.
+  * You would then get the traffic routed to the cloud provider, such as Azure, AWS, Salesforce, and so on.
+  * If you already have a connection to a CEB or a telecom provider, ER activation can be fast, or else it might take several months, depending on whether your data center is located near urban infrastructures or not.
+
+## Map Notes
+* Solution Architecture Map is made up of these classifications
+  * System of Engagements (SoE)
+  * System of Records (SoR)
+  * System of Insights (SoI)
+  * System of Interactions (IPaaS)
+
 
 ## Book Source Code
 https://github.com/PacktPublishing/The-Azure-Cloud-Native-Architecture-Mapbook
 
 ## Upto
-Page 91
+Page 116
 
-Understanding the gaps in our reference architecture
+AKS infrastructure
