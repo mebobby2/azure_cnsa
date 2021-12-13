@@ -76,6 +76,6 @@ Now, to use Azurite, just set the value of AzureWebJobsStorage to 'UseDevelopmen
 https://github.com/PacktPublishing/The-Azure-Cloud-Native-Architecture-Mapbook
 
 ## Upto
-Page 123
+Page 127
 
-Exploring deployment options with AKS
+Exploring miscellaneous aspects
