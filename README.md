@@ -57,6 +57,12 @@ Now, to use Azurite, just set the value of AzureWebJobsStorage to 'UseDevelopmen
 * Connectivity between the on-premises data center and Azure is usually ensured by a telecom provider or a cloud exchange broker (CEB), which consists of having a central connection point to a partner, such as Equinix.
   * You would then get the traffic routed to the cloud provider, such as Azure, AWS, Salesforce, and so on.
   * If you already have a connection to a CEB or a telecom provider, ER activation can be fast, or else it might take several months, depending on whether your data center is located near urban infrastructures or not.
+* AKS
+  * The most important options that communicate between each other are the K8s Service and a service mesh
+    * A K8s Service is an out-of-the-box layer 4 component that supports TCP, UDP, and SCTP. This component behaves as an abstraction layer between the different pods, because pod IP addresses are constantly subject to change.
+    * Service meshes, which we will describe further later, are layer-7-aware and allow for smart load balancing (based on actual backend latency), mTLS, and for understanding typical layer 7 protocols, such as HTTP and gRPC. There are currently two market leaders: Istio and LinkerD.
+    * Service meshes still rely on K8s services, not to route the traffic through the service, but rather to gather the pod IP addresses.
+  * When using Kubenet, IP addresses are only allocated to worker nodes, while pod IPs are NATed. So, each virtual machine that is part of the cluster gets an IP address, and each pod is proxied by the node's primary IP address. When working with Azure CNI, every worker node and every pod gets a dedicated IP. Therefore, Azure CNI requires many more IPs and a bigger subnet size. It is crucial to take this into account in your network design.
 
 ## Map Notes
 * Solution Architecture Map is made up of these classifications
@@ -70,6 +76,6 @@ Now, to use Azurite, just set the value of AzureWebJobsStorage to 'UseDevelopmen
 https://github.com/PacktPublishing/The-Azure-Cloud-Native-Architecture-Mapbook
 
 ## Upto
-Page 116
+Page 123
 
-AKS infrastructure
+Exploring deployment options with AKS
